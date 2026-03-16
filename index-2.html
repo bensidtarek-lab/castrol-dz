@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Castrol Algeria — الوكيل الحصري</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#C8102E;--red2:#A00D24;--red3:#E8112E;--green:#00843D;--green2:#00A84F;--gold:#F2A900;--white:#FFFFFF;--off:#F8F6F0;--cream:#F0EDE6;--lgray:#E8E4DC;--mgray:#9A9590;--dgray:#3D3935;--char:#1E1B18;--black:#0D0B09;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--dgray);overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--red);}
+.topbar{background:var(--red);padding:8px 40px;display:flex;align-items:center;justify-content:space-between;}
+.tb-item{font-size:12px;color:rgba(255,255,255,0.85);font-weight:500;}
+.tb-link{font-size:12px;color:rgba(255,255,255,0.85);text-decoration:none;font-weight:500;}
+.tb-link:hover{color:white;}
+.tb-left,.tb-right{display:flex;gap:20px;}
+nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:3px solid var(--red);box-shadow:0 4px 20px rgba(0,0,0,0.08);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.logo-mark{width:48px;height:48px;background:var(--red);clip-path:polygon(0 0,100% 0,100% 75%,50% 100%,0 75%);display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;color:white;}
+.logo-brand{font-family:'Oswald',sans-serif;font-size:24px;font-weight:700;color:var(--red);letter-spacing:3px;display:block;}
+.logo-sub{font-size:10px;color:var(--mgray);letter-spacing:4px;display:block;}
+.nav-links{display:flex;list-style:none;gap:4px;}
+.nav-links a{color:var(--dgray);text-decoration:none;font-size:14px;font-weight:700;padding:8px 16px;border-radius:6px;transition:all .2s;}
+.nav-links a:hover{color:var(--red);}
+.nav-actions{display:flex;align-items:center;gap:12px;}
+.cart-btn{display:flex;align-items:center;gap:8px;background:var(--cream);border:1px solid var(--lgray);color:var(--dgray);padding:9px 16px;border-radius:8px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:700;transition:all .2s;}
+.cart-btn:hover{border-color:var(--red);color:var(--red);}
+.cart-badge{background:var(--red);color:white;width:20px;height:20px;border-radius:50%;font-size:10px;display:flex;align-items:center;justify-content:center;font-weight:800;}
+.btn-acct{background:var(--green);color:white;padding:10px 22px;border-radius:8px;border:none;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:800;cursor:pointer;transition:all .2s;}
+.btn-acct:hover{background:var(--green2);transform:translateY(-1px);}
+.hero{min-height:88vh;background:var(--char);display:flex;align-items:center;position:relative;overflow:hidden;}
+.hero-stripes{position:absolute;inset:0;opacity:.04;background:repeating-linear-gradient(-55deg,var(--red) 0,var(--red) 2px,transparent 2px,transparent 40px);}
+.hero-accent{position:absolute;top:0;left:0;width:6px;height:100%;background:linear-gradient(180deg,var(--red) 0%,var(--gold) 50%,var(--green) 100%);}
+.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(200,16,46,.15) 0%,transparent 70%);top:-100px;right:-100px;}
+.hero-inner{max-width:1280px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;width:100%;position:relative;z-index:2;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.35);border-right:3px solid var(--red);padding:7px 16px;border-radius:4px;margin-bottom:28px;animation:up .7s ease both;}
+.edot{width:8px;height:8px;background:var(--red);border-radius:50%;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.etxt{font-size:12px;font-weight:800;color:var(--red);letter-spacing:2px;}
+.hero-h1{font-family:'Oswald',sans-serif;font-size:clamp(52px,6.5vw,88px);line-height:.95;font-weight:700;letter-spacing:1px;margin-bottom:12px;animation:up .7s .1s ease both;}
+.h1-w{color:var(--white);display:block;}.h1-r{color:var(--red);display:block;}
+.h1-s{display:block;font-size:.42em;color:var(--gold);letter-spacing:6px;font-weight:500;margin-top:6px;}
+.hero-p{font-size:16px;color:rgba(255,255,255,.5);line-height:1.8;margin:20px 0 36px;max-width:460px;animation:up .7s .2s ease both;font-weight:400;}
+.hero-btns{display:flex;gap:14px;animation:up .7s .3s ease both;}
+.btn-p{background:var(--red);color:white;padding:15px 34px;border-radius:6px;border:none;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:800;cursor:pointer;transition:all .3s;}
+.btn-p:hover{background:var(--red3);transform:translateY(-2px);box-shadow:0 10px 30px rgba(200,16,46,.4);}
+.btn-s{background:transparent;color:rgba(255,255,255,.75);padding:15px 28px;border-radius:6px;border:1px solid rgba(255,255,255,.2);font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .3s;}
+.btn-s:hover{border-color:var(--gold);color:var(--gold);}
+.hero-kpis{display:flex;margin-top:52px;border:1px solid rgba(255,255,255,.08);border-radius:10px;overflow:hidden;animation:up .7s .4s ease both;}
+.kpi{flex:1;padding:20px 16px;text-align:center;border-left:1px solid rgba(255,255,255,.08);}
+.kpi:last-child{border-left:none;}
+.kv{font-family:'Oswald',sans-serif;font-size:32px;font-weight:700;color:var(--red);display:block;line-height:1;}
+.kl{font-size:11px;color:rgba(255,255,255,.4);margin-top:4px;letter-spacing:1px;}
+.hero-vis{display:flex;align-items:center;justify-content:center;position:relative;height:520px;animation:up .7s .15s ease both;}
+.stage{position:relative;width:380px;height:480px;}
+.b-main{position:absolute;top:40px;left:50%;transform:translateX(-50%);z-index:3;animation:fmain 5s ease-in-out infinite;}
+@keyframes fmain{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-16px)}}
+.b-left{position:absolute;top:120px;left:10px;z-index:2;animation:fleft 5s 1.5s ease-in-out infinite;opacity:.85;}
+@keyframes fleft{0%,100%{transform:rotate(-5deg) translateY(0)}50%{transform:rotate(-5deg) translateY(-10px)}}
+.b-right{position:absolute;top:80px;right:0;z-index:2;animation:fright 5s .8s ease-in-out infinite;opacity:.8;}
+@keyframes fright{0%,100%{transform:rotate(5deg) translateY(0)}50%{transform:rotate(5deg) translateY(-12px)}}
+.s-glow{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);width:280px;height:40px;border-radius:50%;background:radial-gradient(ellipse,rgba(200,16,46,.35) 0%,transparent 70%);filter:blur(12px);}
+.s-ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(200,16,46,.15);animation:rpulse 4s ease-in-out infinite;}
+.s-ring1{width:320px;height:320px;}.s-ring2{width:420px;height:420px;animation-delay:1.5s;}
+@keyframes rpulse{0%,100%{opacity:.3;transform:translate(-50%,-50%) scale(1)}50%{opacity:.08;transform:translate(-50%,-50%) scale(1.05)}}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.ticker{background:var(--red);overflow:hidden;padding:12px 0;}
+.t-inner{display:flex;gap:60px;white-space:nowrap;animation:mq 22s linear infinite;}
+.t-item{font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:3px;color:white;display:flex;align-items:center;gap:20px;flex-shrink:0;font-weight:500;}
+.t-sep{color:rgba(255,255,255,.4);}
+@keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.trust{background:var(--white);border-bottom:1px solid var(--lgray);padding:28px 40px;}
+.trust-in{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.tr-item{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:10px;border:1px solid var(--lgray);background:var(--off);transition:all .2s;}
+.tr-item:hover{border-color:var(--red);box-shadow:0 4px 16px rgba(200,16,46,.1);}
+.tr-icon{width:44px;height:44px;border-radius:10px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;border:1px solid var(--lgray);}
+.tr-ttl{font-size:13px;font-weight:800;color:var(--char);}
+.tr-sub{font-size:11px;color:var(--mgray);margin-top:2px;}
+.finder{background:var(--char);padding:80px 40px;position:relative;overflow:hidden;}
+.finder::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--red),var(--gold),var(--green));}
+.fin-in{max-width:1280px;margin:0 auto;}
+.stag{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:3px;color:var(--gold);margin-bottom:12px;}
+.stag::before{content:'';width:24px;height:2px;background:var(--gold);}
+.sh2{font-family:'Oswald',sans-serif;font-size:clamp(32px,4vw,50px);font-weight:700;color:var(--white);letter-spacing:1px;margin-bottom:8px;}
+.sp{font-size:14px;color:rgba(255,255,255,.45);max-width:480px;line-height:1.8;font-weight:400;}
+.fin-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:36px;margin-top:36px;position:relative;overflow:hidden;}
+.fin-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--red);}
+.fin-grid{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:16px;align-items:end;}
+.ff label{display:block;font-size:11px;font-weight:800;color:rgba(255,255,255,.4);letter-spacing:2px;margin-bottom:8px;}
+.ff select{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--white);padding:13px 16px;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:14px;cursor:pointer;transition:border-color .2s;appearance:none;}
+.ff select:focus{outline:none;border-color:var(--red);}
+.ff select option{background:var(--char);}
+.btn-srch{background:var(--red);color:white;border:none;padding:13px 28px;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:800;cursor:pointer;transition:all .2s;white-space:nowrap;display:flex;align-items:center;gap:8px;}
+.btn-srch:hover{background:var(--red3);transform:translateY(-2px);}
+.fin-res{display:none;margin-top:20px;padding:20px 24px;background:rgba(0,132,61,.08);border:1px solid rgba(0,132,61,.25);border-right:3px solid var(--green);border-radius:8px;}
+.fin-res.on{display:flex;align-items:center;gap:16px;}
+.r-icon{font-size:28px;}.r-nm{font-weight:800;font-size:15px;color:var(--white);}.r-ds{font-size:13px;color:rgba(255,255,255,.5);margin-top:3px;}
+.r-btn{margin-right:auto;background:var(--green);color:white;border:none;padding:10px 22px;border-radius:6px;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:800;cursor:pointer;transition:all .2s;}
+.r-btn:hover{background:var(--green2);}
+.prods{padding:80px 40px;background:var(--off);}
+.prods-in{max-width:1280px;margin:0 auto;}
+.prods-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px;}
+.fbar{display:flex;gap:6px;background:var(--white);border:1px solid var(--lgray);border-radius:10px;padding:5px;}
+.ftab{padding:8px 20px;border-radius:7px;border:none;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;background:transparent;color:var(--mgray);}
+.ftab.on{background:var(--red);color:white;}
+.ftab:hover:not(.on){color:var(--dgray);background:var(--cream);}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.pcard{background:var(--white);border-radius:14px;border:1px solid var(--lgray);overflow:hidden;transition:all .3s;cursor:pointer;position:relative;}
+.pcard:hover{border-color:var(--red);transform:translateY(-5px);box-shadow:0 16px 40px rgba(200,16,46,.12);}
+.ptag{position:absolute;top:14px;right:14px;z-index:2;font-size:9px;font-weight:800;letter-spacing:1.5px;padding:4px 10px;border-radius:4px;}
+.ptag.hot{background:var(--red);color:white;}.ptag.new{background:var(--green);color:white;}.ptag.deal{background:var(--gold);color:var(--char);}
+.pimg{height:190px;background:linear-gradient(135deg,var(--cream),var(--lgray));display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.pimg svg{transition:transform .4s cubic-bezier(.175,.885,.32,1.275);}
+.pcard:hover .pimg svg{transform:scale(1.08) translateY(-6px);}
+.pbody{padding:18px 20px 22px;}
+.pbrand{font-size:10px;font-weight:800;color:var(--red);letter-spacing:2px;margin-bottom:5px;}
+.pname{font-size:15px;font-weight:800;color:var(--char);margin-bottom:4px;line-height:1.3;}
+.pspec{font-size:12px;color:var(--mgray);margin-bottom:16px;}
+.pfoot{display:flex;align-items:center;justify-content:space-between;}
+.pprice{font-family:'Oswald',sans-serif;font-size:24px;font-weight:700;color:var(--red);line-height:1;}
+.pprice small{font-family:'Tajawal',sans-serif;font-size:11px;color:var(--mgray);}
+.btn-add{background:var(--cream);color:var(--red);border:1.5px solid var(--red);padding:8px 16px;border-radius:7px;font-family:'Tajawal',sans-serif;font-size:12px;font-weight:800;cursor:pointer;transition:all .2s;}
+.btn-add:hover{background:var(--red);color:white;}
+.cats{padding:80px 40px;background:var(--white);border-top:1px solid var(--lgray);}
+.cats-in{max-width:1280px;margin:0 auto;}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;}
+.ccard{border:1px solid var(--lgray);border-radius:14px;padding:32px;cursor:pointer;transition:all .3s;background:var(--off);position:relative;overflow:hidden;}
+.ccard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transition:transform .3s;}
+.ccard:hover{border-color:var(--red);background:var(--white);transform:translateY(-3px);box-shadow:0 12px 30px rgba(200,16,46,.08);}
+.ccard:hover::after{transform:scaleX(1);}
+.cemi{font-size:38px;margin-bottom:16px;display:block;}
+.cnm{font-family:'Oswald',sans-serif;font-size:22px;font-weight:600;color:var(--char);letter-spacing:1px;margin-bottom:8px;}
+.cds{font-size:13px;color:var(--mgray);line-height:1.7;}
+.ccnt{margin-top:16px;font-size:11px;font-weight:800;color:var(--red);letter-spacing:1px;}
+.b2b{padding:80px 40px;background:var(--char);position:relative;overflow:hidden;}
+.b2b::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--green),var(--gold));}
+.b2b-in{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+.bfeats{display:flex;flex-direction:column;gap:16px;margin-top:32px;}
+.bfeat{display:flex;gap:16px;align-items:flex-start;padding:22px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;transition:all .2s;}
+.bfeat:hover{border-color:rgba(0,132,61,.3);}
+.bfi{width:44px;height:44px;border-radius:10px;flex-shrink:0;background:rgba(0,132,61,.12);border:1px solid rgba(0,132,61,.2);display:flex;align-items:center;justify-content:center;font-size:18px;}
+.bft{font-size:14px;font-weight:800;color:var(--white);margin-bottom:4px;}
+.bfd{font-size:12px;color:rgba(255,255,255,.4);line-height:1.6;}
+.bform{background:var(--white);border-radius:20px;padding:40px;position:relative;overflow:hidden;}
+.bform::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--red),var(--gold),var(--green));}
+.ftl{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:var(--char);letter-spacing:1px;margin-bottom:6px;}
+.fsub{font-size:13px;color:var(--mgray);margin-bottom:28px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fg{margin-bottom:14px;}
+.fg label{display:block;font-size:11px;font-weight:800;color:var(--mgray);letter-spacing:1.5px;margin-bottom:7px;}
+.fg input,.fg select{width:100%;background:var(--off);border:1.5px solid var(--lgray);color:var(--dgray);padding:12px 14px;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:14px;transition:border-color .2s;}
+.fg input:focus,.fg select:focus{outline:none;border-color:var(--green);}
+.btn-reg{width:100%;background:var(--green);color:white;border:none;padding:15px;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:800;cursor:pointer;transition:all .3s;margin-top:6px;}
+.btn-reg:hover{background:var(--green2);transform:translateY(-2px);}
+.testi{padding:80px 40px;background:var(--off);}
+.testi-in{max-width:1280px;margin:0 auto;}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
+.tcard{background:var(--white);border:1px solid var(--lgray);border-radius:14px;padding:28px;transition:all .3s;}
+.tcard:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:0 10px 28px rgba(200,16,46,.08);}
+.tstars{color:var(--gold);font-size:15px;letter-spacing:3px;margin-bottom:14px;}
+.tq{font-size:28px;color:var(--red);line-height:1;margin-bottom:10px;font-family:Georgia,serif;}
+.ttxt{font-size:14px;color:var(--dgray);line-height:1.8;margin-bottom:22px;font-style:italic;}
+.tau{display:flex;align-items:center;gap:12px;}
+.tav{width:44px;height:44px;border-radius:10px;background:var(--red);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;color:white;flex-shrink:0;}
+.tnm{font-size:13px;font-weight:800;color:var(--char);}
+.trl{font-size:11px;color:var(--mgray);margin-top:2px;}
+footer{background:var(--char);padding:64px 40px 28px;}
+.ft-in{max-width:1280px;margin:0 auto;}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08);}
+.ft-desc{font-size:13px;color:rgba(255,255,255,.4);line-height:1.8;max-width:260px;margin:16px 0 24px;}
+.ft-soc{display:flex;gap:10px;}
+.sico{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;font-size:14px;color:rgba(255,255,255,.5);}
+.sico:hover{background:var(--red);border-color:var(--red);color:white;}
+.fc h5{font-size:11px;font-weight:800;color:rgba(255,255,255,.5);letter-spacing:2.5px;margin-bottom:18px;}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fc a{font-size:13px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;}
+.fc a:hover{color:var(--red);}
+.ft-bot{padding-top:24px;display:flex;align-items:center;justify-content:space-between;}
+.copy{font-size:12px;color:rgba(255,255,255,.25);}
+.obadge{background:var(--red);color:white;padding:5px 14px;border-radius:4px;font-size:10px;font-weight:800;letter-spacing:2px;}
+.cveil{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:2000;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(4px);}
+.cveil.open{opacity:1;pointer-events:all;}
+.cpanel{position:absolute;top:0;left:0;bottom:0;width:420px;background:var(--white);transform:translateX(-100%);transition:transform .35s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;}
+.cveil.open .cpanel{transform:translateX(0);}
+.chead{padding:28px 28px 20px;border-bottom:1px solid var(--lgray);display:flex;align-items:center;justify-content:space-between;}
+.chead h3{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:var(--char);letter-spacing:1px;}
+.xbtn{background:var(--cream);border:1px solid var(--lgray);width:34px;height:34px;border-radius:8px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--mgray);transition:all .2s;}
+.xbtn:hover{background:var(--red);border-color:var(--red);color:white;}
+.cbody{flex:1;overflow-y:auto;padding:20px 28px;display:flex;flex-direction:column;gap:14px;}
+.cempty{text-align:center;padding:60px 20px;color:var(--mgray);}
+.cempty .ei{font-size:48px;margin-bottom:16px;opacity:.4;}
+.ci-row{display:flex;gap:14px;align-items:center;padding:16px;background:var(--off);border:1px solid var(--lgray);border-radius:12px;}
+.ci-th{width:54px;height:70px;background:var(--cream);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;}
+.ci-nm{font-size:13px;font-weight:800;color:var(--char);}
+.ci-sp{font-size:11px;color:var(--mgray);margin-top:2px;}
+.ci-pr{font-family:'Oswald',sans-serif;font-size:20px;color:var(--red);font-weight:700;margin-top:6px;}
+.qrow{display:flex;align-items:center;gap:8px;margin-top:8px;}
+.qb{background:var(--white);border:1px solid var(--lgray);color:var(--dgray);width:28px;height:28px;border-radius:6px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.qb:hover{border-color:var(--red);color:var(--red);}
+.qn{font-size:13px;font-weight:800;color:var(--char);min-width:22px;text-align:center;}
+.cfoot{border-top:1px solid var(--lgray);padding:20px 28px;}
+.ctrow{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.ctrow span{font-size:14px;color:var(--mgray);}
+.ctrow strong{font-family:'Oswald',sans-serif;font-size:30px;color:var(--red);font-weight:700;}
+.chkbtn{width:100%;background:var(--red);color:white;border:none;padding:16px;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:800;cursor:pointer;transition:all .3s;}
+.chkbtn:hover{background:var(--red3);}
+.toast{position:fixed;bottom:28px;right:28px;z-index:3000;background:var(--char);border:1px solid var(--lgray);border-right:3px solid var(--green);border-radius:10px;padding:14px 20px;display:flex;align-items:center;gap:12px;transform:translateY(80px);opacity:0;transition:all .4s cubic-bezier(.175,.885,.32,1.275);font-size:13px;color:var(--white);font-weight:500;box-shadow:0 8px 24px rgba(0,0,0,.3);}
+.toast.on{transform:translateY(0);opacity:1;}
+.section-r{color:var(--red)!important;}
+@media(max-width:768px){.topbar,.nav-links{display:none;}nav{padding:0 16px;}.hero-inner{grid-template-columns:1fr;padding:0 20px;gap:30px;}.hero-vis{display:none;}.trust-in,.pgrid,.cgrid,.tgrid{grid-template-columns:1fr 1fr;}.b2b-in{grid-template-columns:1fr;}.ft-top{grid-template-columns:1fr 1fr;}.prods,.cats,.testi,.finder,.b2b{padding:50px 16px;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="tb-left">
+    <span class="tb-item">📍 عين مليلة، أم البواقي</span>
+    <span class="tb-item">📞 05XX XX XX XX</span>
+    <span class="tb-item">⏰ السبت–الخميس، 8ص–5م</span>
+  </div>
+  <div class="tb-right">
+    <a href="#" class="tb-link">تتبع طلبيتك</a>
+    <a href="#b2b" class="tb-link">بوابة B2B</a>
+  </div>
+</div>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="logo-mark">C</div>
+    <div><span class="logo-brand">CASTROL</span><span class="logo-sub">ALGÉRIE</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#prods">المنتجات</a></li>
+    <li><a href="#finder">اختيار الزيت</a></li>
+    <li><a href="#cats">التصنيفات</a></li>
+    <li><a href="#b2b">الشركات</a></li>
+    <li><a href="#contact">تواصل</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="toggleCart()">
+      <span>🛒</span><span>السلة</span>
+      <span class="cart-badge" id="ccount">0</span>
+    </button>
+    <button class="btn-acct" onclick="toast('صفحة الحساب قريباً! 👤')">حسابي</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-stripes"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow"><span class="edot"></span><span class="etxt">الوكيل الحصري الرسمي بالجزائر</span></div>
+      <h1 class="hero-h1">
+        <span class="h1-w">CASTROL</span>
+        <span class="h1-r">ALGERIA</span>
+        <span class="h1-s">عين مليلة — منذ 2025</span>
+      </h1>
+      <p class="hero-p">زيوت ومواد تشحيم كاسترول الأصلية — مباشرة من المصنع إليك. جودة عالمية، أسعار تنافسية، توصيل لجميع الولايات الـ 48.</p>
+      <div class="hero-btns">
+        <button class="btn-p" onclick="document.getElementById('prods').scrollIntoView({behavior:'smooth'})">🛒 تسوّق الآن</button>
+        <button class="btn-s" onclick="document.getElementById('finder').scrollIntoView({behavior:'smooth'})">اختر زيتك المناسب</button>
+      </div>
+      <div class="hero-kpis">
+        <div class="kpi"><span class="kv">48</span><span class="kl">ولاية</span></div>
+        <div class="kpi"><span class="kv">100%</span><span class="kl">أصلي</span></div>
+        <div class="kpi"><span class="kv">24H</span><span class="kl">توصيل</span></div>
+        <div class="kpi"><span class="kv">+50</span><span class="kl">منتج</span></div>
+      </div>
+    </div>
+    <div class="hero-vis">
+      <div class="stage">
+        <div class="s-ring s-ring1"></div><div class="s-ring s-ring2"></div>
+        <div class="b-left">
+          <svg viewBox="0 0 90 170" style="width:80px;height:151px;filter:drop-shadow(-5px 12px 20px rgba(0,0,0,.5));">
+            <defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#C8102E"/><stop offset="100%" style="stop-color:#6a0010"/></linearGradient></defs>
+            <rect x="10" y="18" width="70" height="142" rx="10" fill="#111"/>
+            <rect x="14" y="24" width="62" height="110" rx="7" fill="url(#g1)"/>
+            <rect x="16" y="26" width="58" height="2" rx="1" fill="rgba(255,255,255,.2)"/>
+            <text x="45" y="55" text-anchor="middle" font-family="Arial Black" font-size="10" fill="white" letter-spacing="2" font-weight="900">CASTROL</text>
+            <text x="45" y="86" text-anchor="middle" font-family="Arial Black" font-size="24" fill="white" font-weight="900">GTX</text>
+            <rect x="18" y="93" width="54" height="18" rx="3" fill="rgba(0,0,0,.3)"/>
+            <text x="45" y="106" text-anchor="middle" font-family="Arial" font-size="10" fill="rgba(255,255,255,.9)" font-weight="700">15W-40</text>
+            <rect x="10" y="151" width="70" height="9" rx="0 0 10 10" fill="#F2A900"/>
+            <rect x="33" y="4" width="24" height="16" rx="4" fill="#2a2a2a"/>
+          </svg>
+        </div>
+        <div class="b-main">
+          <svg viewBox="0 0 150 290" style="width:148px;height:287px;filter:drop-shadow(-10px 20px 40px rgba(0,0,0,.7)) drop-shadow(0 0 30px rgba(200,16,46,.2));">
+            <defs>
+              <linearGradient id="eb" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#080808"/><stop offset="30%" style="stop-color:#1a1a1a"/><stop offset="100%" style="stop-color:#060606"/></linearGradient>
+              <linearGradient id="el" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#C8102E"/><stop offset="55%" style="stop-color:#8B0000"/><stop offset="100%" style="stop-color:#4a0010"/></linearGradient>
+              <linearGradient id="es" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgba(255,255,255,0)"/><stop offset="50%" style="stop-color:rgba(255,255,255,.12)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0)"/></linearGradient>
+            </defs>
+            <rect x="47" y="4" width="56" height="24" rx="6" fill="#2a2a2a"/>
+            <rect x="10" y="26" width="130" height="250" rx="14" fill="url(#eb)"/>
+            <rect x="16" y="34" width="118" height="188" rx="9" fill="url(#el)"/>
+            <rect x="18" y="36" width="114" height="3" rx="1.5" fill="rgba(255,255,255,.22)"/>
+            <rect x="16" y="34" width="4" height="188" rx="2" fill="rgba(255,255,255,.1)"/>
+            <text x="75" y="80" text-anchor="middle" font-family="Arial Black" font-size="24" fill="white" letter-spacing="4" font-weight="900">CASTROL</text>
+            <rect x="26" y="86" width="98" height="2" rx="1" fill="rgba(255,255,255,.25)"/>
+            <text x="75" y="148" text-anchor="middle" font-family="Arial Black" font-size="50" fill="white" font-weight="900" letter-spacing="2">EDGE</text>
+            <rect x="30" y="158" width="90" height="26" rx="5" fill="rgba(0,0,0,.4)"/>
+            <text x="75" y="175" text-anchor="middle" font-family="Arial" font-size="14" fill="rgba(255,255,255,.95)" font-weight="700" letter-spacing="2">5W-30</text>
+            <text x="75" y="204" text-anchor="middle" font-family="Arial" font-size="9" fill="rgba(255,255,255,.5)" letter-spacing="2">FULL SYNTHETIC</text>
+            <text x="75" y="226" text-anchor="middle" font-family="Arial Black" font-size="14" fill="rgba(255,255,255,.35)" letter-spacing="3">4 LITRES</text>
+            <rect x="10" y="258" width="130" height="18" rx="0 0 14 14" fill="#F2A900"/>
+            <rect x="10" y="26" width="130" height="250" rx="14" fill="url(#es)"/>
+          </svg>
+        </div>
+        <div class="b-right">
+          <svg viewBox="0 0 90 170" style="width:78px;height:147px;filter:drop-shadow(5px 12px 20px rgba(0,0,0,.5));">
+            <defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00843D"/><stop offset="100%" style="stop-color:#003d1c"/></linearGradient></defs>
+            <rect x="10" y="18" width="70" height="142" rx="10" fill="#0d0d0d"/>
+            <rect x="14" y="24" width="62" height="110" rx="7" fill="url(#g2)"/>
+            <text x="45" y="54" text-anchor="middle" font-family="Arial Black" font-size="9" fill="rgba(255,255,255,.8)" letter-spacing="2">CASTROL</text>
+            <text x="45" y="79" text-anchor="middle" font-family="Arial Black" font-size="20" fill="#00C878" font-weight="900">CRB</text>
+            <text x="45" y="95" text-anchor="middle" font-family="Arial" font-size="8" fill="rgba(255,255,255,.55)" letter-spacing="1.5">TURBOMAX</text>
+            <rect x="18" y="101" width="54" height="18" rx="3" fill="rgba(0,0,0,.35)"/>
+            <text x="45" y="114" text-anchor="middle" font-family="Arial" font-size="10" fill="rgba(255,255,255,.9)" font-weight="700">15W-40</text>
+            <rect x="10" y="151" width="70" height="9" rx="0 0 10 10" fill="#C8102E"/>
+            <rect x="33" y="4" width="24" height="16" rx="4" fill="#2a2a2a"/>
+          </svg>
+        </div>
+        <div class="s-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="t-inner">
+    <span class="t-item">CASTROL EDGE <span class="t-sep">◆</span></span>
+    <span class="t-item">زيوت أصلية 100% <span class="t-sep">◆</span></span>
+    <span class="t-item">توصيل لـ 48 ولاية <span class="t-sep">◆</span></span>
+    <span class="t-item">الوكيل الحصري — عين مليلة <span class="t-sep">◆</span></span>
+    <span class="t-item">دفع عند الاستلام <span class="t-sep">◆</span></span>
+    <span class="t-item">أسعار الجملة للورشات <span class="t-sep">◆</span></span>
+    <span class="t-item">CASTROL GTX <span class="t-sep">◆</span></span>
+    <span class="t-item">ضمان الجودة <span class="t-sep">◆</span></span>
+    <span class="t-item">CASTROL EDGE <span class="t-sep">◆</span></span>
+    <span class="t-item">زيوت أصلية 100% <span class="t-sep">◆</span></span>
+    <span class="t-item">توصيل لـ 48 ولاية <span class="t-sep">◆</span></span>
+    <span class="t-item">الوكيل الحصري — عين مليلة <span class="t-sep">◆</span></span>
+    <span class="t-item">دفع عند الاستلام <span class="t-sep">◆</span></span>
+    <span class="t-item">أسعار الجملة للورشات <span class="t-sep">◆</span></span>
+    <span class="t-item">CASTROL GTX <span class="t-sep">◆</span></span>
+    <span class="t-item">ضمان الجودة <span class="t-sep">◆</span></span>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="trust-in">
+    <div class="tr-item"><div class="tr-icon">🚚</div><div><div class="tr-ttl">توصيل لكل الجزائر</div><div class="tr-sub">48 ولاية — 3 إلى 5 أيام</div></div></div>
+    <div class="tr-item"><div class="tr-icon">🔒</div><div><div class="tr-ttl">منتجات أصلية 100%</div><div class="tr-sub">مباشرة من مصنع عين مليلة</div></div></div>
+    <div class="tr-item"><div class="tr-icon">💳</div><div><div class="tr-ttl">طرق دفع متعددة</div><div class="tr-sub">CIB، eDahabia، عند الاستلام</div></div></div>
+    <div class="tr-item"><div class="tr-icon">📞</div><div><div class="tr-ttl">دعم على مدار الساعة</div><div class="tr-sub">واتساب + هاتف + إيميل</div></div></div>
+  </div>
+</div>
+
+<div class="finder" id="finder">
+  <div class="fin-in">
+    <div class="stag">اختر بذكاء</div>
+    <h2 class="sh2">دلّيني على زيتك</h2>
+    <p class="sp">أدخل بيانات سيارتك واحصل على توصية الزيت المناسب فوراً</p>
+    <div class="fin-card">
+      <div class="fin-grid">
+        <div class="ff"><label>نوع المركبة</label><select id="vt"><option value="">اختر النوع</option><option>سيارة سياحية</option><option>شاحنة خفيفة</option><option>شاحنة ثقيلة</option><option>جرار فلاحي</option><option>معدات صناعية</option></select></div>
+        <div class="ff"><label>العلامة التجارية</label><select id="vb"><option value="">اختر العلامة</option><option>Renault</option><option>Peugeot</option><option>Toyota</option><option>Hyundai</option><option>Volkswagen</option><option>Mercedes</option><option>BMW</option><option>Kia</option></select></div>
+        <div class="ff"><label>نوع المحرك</label><select id="ve"><option value="">اختر المحرك</option><option>بنزين عادي</option><option>ديزل</option><option>بنزين تيربو</option><option>هجين Hybrid</option></select></div>
+        <div class="ff"><label>سنة الصنع</label><select id="vy"><option value="">اختر السنة</option><option>2020 — 2025</option><option>2015 — 2019</option><option>2010 — 2014</option><option>قبل 2010</option></select></div>
+        <button class="btn-srch" onclick="runF()">🔍 ابحث</button>
+      </div>
+      <div class="fin-res" id="fres">
+        <div class="r-icon">✅</div>
+        <div><div class="r-nm" id="rn"></div><div class="r-ds" id="rd"></div></div>
+        <button class="r-btn" onclick="toast('تمت الإضافة للسلة! 🛒')">أضف للسلة</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="prods" id="prods">
+  <div class="prods-in">
+    <div class="prods-hd">
+      <div>
+        <div class="stag section-r">كتالوج المنتجات</div>
+        <h2 class="sh2" style="color:var(--char)">أكثر المنتجات طلباً</h2>
+      </div>
+      <div class="fbar">
+        <button class="ftab on" onclick="fp(this,'all')">الكل</button>
+        <button class="ftab" onclick="fp(this,'car')">سيارات</button>
+        <button class="ftab" onclick="fp(this,'truck')">شاحنات</button>
+        <button class="ftab" onclick="fp(this,'agri')">فلاحة</button>
+      </div>
+    </div>
+    <div class="pgrid" id="pgrid"></div>
+  </div>
+</div>
+
+<div class="cats" id="cats">
+  <div class="cats-in">
+    <div class="stag section-r">استكشف</div>
+    <h2 class="sh2" style="color:var(--char)">تصنيفات المنتجات</h2>
+    <div class="cgrid">
+      <div class="ccard" onclick="fp(null,'car');document.getElementById('prods').scrollIntoView({behavior:'smooth'})"><span class="cemi">🚗</span><div class="cnm">السيارات والخواص</div><div class="cds">GTX، EDGE، Magnatec — لجميع أنواع السيارات</div><div class="ccnt">+18 منتج →</div></div>
+      <div class="ccard"><span class="cemi">🚛</span><div class="cnm">الشاحنات والنقل</div><div class="cds">CRB Turbomax، Enduron — للشاحنات الثقيلة</div><div class="ccnt" style="color:var(--green)">+12 منتج →</div></div>
+      <div class="ccard"><span class="cemi">🚜</span><div class="cnm">الفلاحة والمعدات</div><div class="cds">Agri MP، Tractor Trans — للجرارات والمعدات</div><div class="ccnt">+8 منتج →</div></div>
+      <div class="ccard"><span class="cemi">🏭</span><div class="cnm">الصناعة والمصانع</div><div class="cds">Hyspin، Alphasyn، Tribol — للآلات الصناعية</div><div class="ccnt" style="color:var(--gold)">+15 منتج →</div></div>
+      <div class="ccard"><span class="cemi">⚙️</span><div class="cnm">ناقل الحركة والسوائل</div><div class="cds">Transmax ATF، React — سوائل متخصصة</div><div class="ccnt">+10 منتج →</div></div>
+      <div class="ccard"><span class="cemi">🏍️</span><div class="cnm">الدراجات النارية</div><div class="cds">Power 1، GO Scooter — لكل أنواع الدراجات</div><div class="ccnt">+6 منتج →</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="b2b" id="b2b">
+  <div class="b2b-in">
+    <div>
+      <div class="stag">للمهنيين</div>
+      <h2 class="sh2">بوابة B2B</h2>
+      <p class="sp" style="color:rgba(255,255,255,.45)">سجّل شركتك أو ورشتك للاستفادة من أسعار الجملة والدعم التقني المخصص.</p>
+      <div class="bfeats">
+        <div class="bfeat"><div class="bfi">💰</div><div><div class="bft">أسعار الجملة الحصرية</div><div class="bfd">خصومات تصل إلى 20% حسب حجم الطلبيات الشهرية</div></div></div>
+        <div class="bfeat"><div class="bfi">📋</div><div><div class="bft">فاتورة رسمية تلقائية</div><div class="bfd">كل طلبية تُولّد فاتورة رسمية بالنموذج القانوني الجزائري</div></div></div>
+        <div class="bfeat"><div class="bfi">🔄</div><div><div class="bft">طلبية متكررة بنقرة واحدة</div><div class="bfd">احفظ طلبياتك المعتادة وكرّرها بدون إعادة الإدخال</div></div></div>
+        <div class="bfeat"><div class="bfi">🛠️</div><div><div class="bft">دعم تقني مخصص</div><div class="bfd">مندوب مخصص، تدريب مجاني، وأولوية في التوصيل</div></div></div>
+      </div>
+    </div>
+    <div class="bform">
+      <div class="ftl">سجّل الآن — مجاناً</div>
+      <div class="fsub">سنتواصل معك خلال 24 ساعة</div>
+      <div class="frow">
+        <div class="fg"><label>الاسم التجاري</label><input type="text" placeholder="ورشة / شركة..."></div>
+        <div class="fg"><label>نوع النشاط</label><select><option>اختر</option><option>ورشة ميكانيك</option><option>محل قطع غيار</option><option>محطة وقود</option><option>شركة نقل</option><option>مصنع</option><option>فلاحة</option><option>موزع جهوي</option></select></div>
+      </div>
+      <div class="frow">
+        <div class="fg"><label>الاسم الكامل</label><input type="text" placeholder="الاسم واللقب"></div>
+        <div class="fg"><label>رقم الهاتف</label><input type="tel" placeholder="05 / 06 / 07..."></div>
+      </div>
+      <div class="frow">
+        <div class="fg"><label>الولاية</label><select><option>اختر</option><option>أم البواقي</option><option>قسنطينة</option><option>سطيف</option><option>باتنة</option><option>الجزائر</option><option>وهران</option><option>ورقلة</option></select></div>
+        <div class="fg"><label>حجم الشراء / شهر</label><select><option>التقدير</option><option>أقل من 50 لتر</option><option>50—200 لتر</option><option>200—500 لتر</option><option>أكثر من 500 لتر</option></select></div>
+      </div>
+      <button class="btn-reg" onclick="toast('تم إرسال طلبك! سنتواصل خلال 24 ساعة ✅')">إرسال الطلب</button>
+    </div>
+  </div>
+</div>
+
+<div class="testi">
+  <div class="testi-in">
+    <div class="stag section-r">آراء العملاء</div>
+    <h2 class="sh2" style="color:var(--char)">ماذا يقولون عنّا</h2>
+    <div class="tgrid">
+      <div class="tcard"><div class="tstars">★★★★★</div><div class="tq">"</div><p class="ttxt">منتجات أصلية 100%، جربت كاسترول EDGE في سيارتي الجديدة والفرق واضح جداً من أول 500 كيلومتر. التوصيل كان سريع لولاية سطيف.</p><div class="tau"><div class="tav">ك</div><div><div class="tnm">كريم بوعمامة</div><div class="trl">سطيف — صاحب سيارة</div></div></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><div class="tq">"</div><p class="ttxt">أنا صاحب ورشة، أطلب بالجملة كل شهر. الأسعار معقولة، الفواتير رسمية، والمندوب يرد بسرعة. أنصح كل ورشة تتعامل معهم.</p><div class="tau"><div class="tav" style="background:var(--green)">م</div><div><div class="tnm">محمد العربي</div><div class="trl">قسنطينة — صاحب ورشة</div></div></div></div>
+      <div class="tcard"><div class="tstars">★★★★☆</div><div class="tq">"</div><p class="ttxt">شركتنا تشتري زيوت للآليات الثقيلة. الزيوت الصناعية كاسترول ممتازة والتوريد منتظم. سعيدون بالتعامل مع الوكيل الحصري مباشرة.</p><div class="tau"><div class="tav" style="background:var(--gold);color:var(--char)">ر</div><div><div class="tnm">رضا منصوري</div><div class="trl">باتنة — مدير مصنع</div></div></div></div>
+    </div>
+  </div>
+</div>
+
+<footer id="contact">
+  <div class="ft-in">
+    <div class="ft-top">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <div class="logo-mark">C</div>
+          <div><span class="logo-brand">CASTROL</span><span class="logo-sub" style="color:rgba(255,255,255,.3)">ALGÉRIE</span></div>
+        </div>
+        <p class="ft-desc">الوكيل الحصري الرسمي لمنتجات كاسترول بالجزائر. مقرّنا مدينة عين مليلة، نُوصّل لكل الولايات الـ 48.</p>
+        <div class="ft-soc">
+          <span class="sico" onclick="toast('Facebook قريباً!')">f</span>
+          <span class="sico" onclick="toast('Instagram قريباً!')">◻</span>
+          <span class="sico" onclick="toast('TikTok قريباً!')">♪</span>
+          <span class="sico" onclick="toast('WhatsApp: 05XX XX XX XX')">W</span>
+        </div>
+      </div>
+      <div class="fc"><h5>المنتجات</h5><ul><li><a href="#">زيوت السيارات</a></li><li><a href="#">زيوت الشاحنات</a></li><li><a href="#">زيوت الفلاحة</a></li><li><a href="#">زيوت الصناعة</a></li><li><a href="#">سوائل الفرامل</a></li></ul></div>
+      <div class="fc"><h5>الخدمات</h5><ul><li><a href="#b2b">بوابة B2B</a></li><li><a href="#finder">اختيار الزيت</a></li><li><a href="#">برنامج الورشات</a></li><li><a href="#">طلب بالجملة</a></li><li><a href="#">تتبع الطلبية</a></li></ul></div>
+      <div class="fc"><h5>تواصل معنا</h5><ul><li><a href="#">📍 عين مليلة، أم البواقي</a></li><li><a href="#">📞 05XX XX XX XX</a></li><li><a href="#">✉️ info@castrol-dz.com</a></li><li><a href="#">⏰ 8ص—5م | السبت-الخميس</a></li></ul></div>
+    </div>
+    <div class="ft-bot">
+      <p class="copy">© 2025 Castrol Algeria — الوكيل الحصري. جميع الحقوق محفوظة.</p>
+      <div class="obadge">CASTROL OFFICIAL</div>
+    </div>
+  </div>
+</footer>
+
+<div class="cveil" id="cveil" onclick="cc(event)">
+  <div class="cpanel">
+    <div class="chead"><h3>سلة الشراء</h3><button class="xbtn" onclick="toggleCart()">✕</button></div>
+    <div class="cbody" id="cbody"><div class="cempty"><div class="ei">🛒</div><div>السلة فارغة</div></div></div>
+    <div class="cfoot" id="cfoot" style="display:none">
+      <div class="ctrow"><span>الإجمالي</span><strong id="ctotal">0 دج</strong></div>
+      <button class="chkbtn" onclick="toast('جاري تجهيز الطلبية... ✅')">إتمام الشراء →</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="tst"><span>✅</span><span id="tmsg">تمت العملية</span></div>
+
+<script>
+const P=[
+  {id:1,n:"Castrol EDGE 5W-30",c:"car",s:"Full Synthetic — 4 لتر",p:3380,t:"hot",cl:"#C8102E",g:"5W-30"},
+  {id:2,n:"Castrol GTX 15W-40",c:"car",s:"Semi Synthetic — 5 لتر",p:1500,t:"",cl:"#C8102E",g:"15W-40"},
+  {id:3,n:"Castrol Magnatec 10W-40",c:"car",s:"Smart Molecules — 5 لتر",p:1688,t:"new",cl:"#1a3a8e",g:"10W-40"},
+  {id:4,n:"Castrol CRB Turbomax",c:"truck",s:"Diesel HD — 20 لتر",p:6000,t:"",cl:"#00843D",g:"15W-40"},
+  {id:5,n:"Castrol EDGE 0W-20",c:"car",s:"Full Synthetic — 4 لتر",p:4200,t:"deal",cl:"#C8102E",g:"0W-20"},
+  {id:6,n:"Castrol Agri MP",c:"agri",s:"Multi-Purpose — 20 لتر",p:5250,t:"",cl:"#2a4a1a",g:"15W-40"},
+  {id:7,n:"Castrol Enduron",c:"truck",s:"Long Drain — 20 لتر",p:7200,t:"",cl:"#1a2a4a",g:"10W-40"},
+  {id:8,n:"Castrol Transmax ATF",c:"car",s:"Auto Trans — 1 لتر",p:845,t:"",cl:"#4a1a1a",g:"ATF"},
+];
+let cart=[];
+
+function svg(p){
+  const nm=p.n.replace('Castrol ','');
+  const pts=nm.split(' ');
+  return `<svg viewBox="0 0 110 200" xmlns="http://www.w3.org/2000/svg" style="width:94px;height:171px;transition:transform .4s cubic-bezier(.175,.885,.32,1.275);">
+  <defs>
+    <linearGradient id="pb${p.id}" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#0a0a0a"/><stop offset="35%" style="stop-color:#1c1c1c"/><stop offset="100%" style="stop-color:#080808"/></linearGradient>
+    <linearGradient id="pl${p.id}" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:${p.cl}"/><stop offset="100%" style="stop-color:${p.cl}88"/></linearGradient>
+    <linearGradient id="ps${p.id}" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgba(255,255,255,0)"/><stop offset="50%" style="stop-color:rgba(255,255,255,.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0)"/></linearGradient>
+  </defs>
+  <rect x="12" y="22" width="86" height="166" rx="11" fill="url(#pb${p.id})"/>
+  <rect x="17" y="29" width="76" height="130" rx="7" fill="url(#pl${p.id})"/>
+  <rect x="19" y="31" width="72" height="2.5" rx="1.25" fill="rgba(255,255,255,.22)"/>
+  <rect x="17" y="29" width="3.5" height="130" rx="1.75" fill="rgba(255,255,255,.1)"/>
+  <text x="55" y="62" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="12" font-weight="900" fill="white" letter-spacing="2">CASTROL</text>
+  <rect x="21" y="66" width="68" height="1.5" rx=".75" fill="rgba(255,255,255,.22)"/>
+  <text x="55" y="${pts.length>1?92:100}" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="${pts[0].length>6?17:22}" font-weight="900" fill="white" letter-spacing="1">${pts[0]}</text>
+  ${pts.length>1?`<text x="55" y="110" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,.8)">${pts.slice(1).join(' ')}</text>`:''}
+  <rect x="23" y="${pts.length>1?118:114}" width="64" height="22" rx="4" fill="rgba(0,0,0,.38)"/>
+  <text x="55" y="${pts.length>1?133:129}" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.92)">${p.g}</text>
+  <rect x="12" y="178" width="86" height="10" rx="0 0 11 11" fill="${p.cl==='#C8102E'?'#F2A900':'#C8102E'}"/>
+  <rect x="12" y="22" width="86" height="166" rx="11" fill="url(#ps${p.id})"/>
+  <rect x="12" y="22" width="2.5" height="166" rx="1.25" fill="rgba(255,255,255,.07)"/>
+  <rect x="38" y="5" width="34" height="19" rx="5" fill="#252525"/>
+</svg>`;
+}
+
+function render(f='all'){
+  const list=f==='all'?P:P.filter(x=>x.c===f);
+  document.getElementById('pgrid').innerHTML=list.map(p=>`
+    <div class="pcard">
+      ${p.t?`<span class="ptag ${p.t}">${p.t==='hot'?'الأكثر طلباً':p.t==='new'?'جديد':'عرض'}</span>`:''}
+      <div class="pimg">${svg(p)}</div>
+      <div class="pbody">
+        <div class="pbrand">CASTROL</div>
+        <div class="pname">${p.n}</div>
+        <div class="pspec">${p.s}</div>
+        <div class="pfoot">
+          <div class="pprice">${p.p.toLocaleString()}<small> دج</small></div>
+          <button class="btn-add" onclick="addC(${p.id})">+ أضف</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function fp(btn,f){
+  document.querySelectorAll('.ftab').forEach(b=>b.classList.remove('on'));
+  if(btn)btn.classList.add('on');
+  render(f);
+}
+
+function addC(id){
+  const p=P.find(x=>x.id===id);
+  const e=cart.find(x=>x.id===id);
+  if(e)e.q++;else cart.push({...p,q:1});
+  updC();toast(`تمت إضافة "${p.n}" 🛒`);
+}
+
+function updC(){
+  const cnt=cart.reduce((s,i)=>s+i.q,0);
+  document.getElementById('ccount').textContent=cnt;
+  const body=document.getElementById('cbody');
+  const foot=document.getElementById('cfoot');
+  if(!cart.length){body.innerHTML='<div class="cempty"><div class="ei">🛒</div><div>السلة فارغة</div></div>';foot.style.display='none';return;}
+  foot.style.display='block';
+  body.innerHTML=cart.map(i=>`<div class="ci-row"><div class="ci-th">${svg({...i,id:'c'+i.id})}</div><div><div class="ci-nm">${i.n}</div><div class="ci-sp">${i.s}</div><div class="ci-pr">${i.p.toLocaleString()} دج</div><div class="qrow"><button class="qb" onclick="chQ(${i.id},-1)">−</button><span class="qn">${i.q}</span><button class="qb" onclick="chQ(${i.id},1)">+</button></div></div></div>`).join('');
+  document.getElementById('ctotal').textContent=cart.reduce((s,i)=>s+i.p*i.q,0).toLocaleString()+' دج';
+}
+
+function chQ(id,d){const i=cart.find(x=>x.id===id);if(!i)return;i.q+=d;if(i.q<=0)cart=cart.filter(x=>x.id!==id);updC();}
+function toggleCart(){document.getElementById('cveil').classList.toggle('open');}
+function cc(e){if(e.target===document.getElementById('cveil'))toggleCart();}
+
+function runF(){
+  const e=document.getElementById('ve').value;
+  const y=document.getElementById('vy').value;
+  const v=document.getElementById('vt').value;
+  if(!v&&!e){toast('الرجاء اختيار نوع المركبة أو المحرك');return;}
+  let n='',d='';
+  if(e==='ديزل'){n='Castrol CRB Turbomax 15W-40';d='مثالي للمحركات الديزل — يُمدّد عمر المحرك ويُقلل الاحتكاك';}
+  else if(y==='2020 — 2025'){n='Castrol EDGE 5W-30 Full Synthetic';d='الأنسب للمحركات الحديثة — أقصى حماية بتقنية Fluid Titanium';}
+  else if(y==='قبل 2010'){n='Castrol GTX 15W-40';d='الأنسب للمحركات القديمة — ينظف ويحمي في نفس الوقت';}
+  else{n='Castrol Magnatec 10W-40';d='الجزيئات الذكية تحمي المحرك فوراً عند الإطلاق';}
+  document.getElementById('rn').textContent='✅ '+n;
+  document.getElementById('rd').textContent=d;
+  document.getElementById('fres').classList.add('on');
+}
+
+let tt;
+function toast(m){clearTimeout(tt);document.getElementById('tmsg').textContent=m;const e=document.getElementById('tst');e.classList.add('on');tt=setTimeout(()=>e.classList.remove('on'),3200);}
+
+render();
+</script>
+</body>
+</html>
